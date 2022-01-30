@@ -5,56 +5,56 @@ a = 'Hi';
 console.log(a);
 
 let b = 'Hello';
-//b = 'hhh';
+b = 'hhh';
 console.log(b);
 
 const height = 180;
-//height = 200;
+// height = 200;
 
-// ไม่นิยมแล้ว เกิดความสับสน
 c = 1;
 var c;
 console.log(c);
 
-// Naming convention
+// Naming Convention
 // camelCase -> js
-// snake-case
+// snake_case
 // kebab-case
-// Pascal-case
+// PascalCase
 
-//Data Types
+// Data Types
 let o = null;
 let u = undefined;
 let myString = 'Hello, World';
 let myNumber = 3;
-let myBoolean = true; //or False
+let myBoolean = true; // or false
 let myArr = [1, 'n', false, [3, '3']];
-let myObj = {name: 'Rawitch', age: 20, isStudent: true };
+let myObj = { name: 'Tatpol', age: 20, isStudent: true };
 
-let num1 = 3+3-3*3/3;
+let num1 = 3 + 3 - (3 * 3) / 3;
 
 // ===, !==, <, >, <=, >=
-console.log('123' == 123);
-console.log('123' === 123);
 
-//conditionals
+// Conditionals
 
-let fruit = 'banana';
-if(fruit === 'banana'){
-    console.log('This is banana');
-} else if(fruit === 'apple'){
-    console.log('This is apple');
+let fruit = 'orange';
+
+if (fruit === 'banana') {
+  console.log('This is banana');
+} else if (fruit === 'apple') {
+  console.log('This is apple');
 } else {
-    console.log('Something else');
+  console.log('Something else');
 }
 
 // Ternary Operator
 
-const result = 10 % 2 === 0 ? 'even':'odd';
+const result = 10 % 2 === 0 ? 'even' : 'odd';
+console.log(result);
 
-//Array
+// Array
 
- const fruits = ['apple', 'mango', 'banana', 'orange'];
+const fruits = ['apple', 'mango', 'banana', 'orange'];
+
 // console.log(fruits.length);
 // console.log(fruits[1]);
 
@@ -62,95 +62,94 @@ const result = 10 % 2 === 0 ? 'even':'odd';
 // console.log(fruits);
 // console.log(fruits.length);
 
-// fruits.splice(0,2);
+// fruits.splice(0, 2);
 // console.log(fruits);
 
 // Loop
 
-// for (let i=0; i < fruits.length; i++) {
-//     console.log(fruits[i]);
+// for (let i = 0; i < fruits.length; i++) {
+//   console.log(fruits[i]);
 // }
 
-for(const f of fruits) {
-    console.log(f);
+for (const f of fruits) {
+  console.log(f);
 }
 
-// String Concatenation
-const name = 'Rawitch';
+// String Concatenating
+const name = 'Tatpol';
 const greeting1 = 'Hello, ' + name;
-// const greeting2 = 
-
+const greeting2 = `Hello, ${name}`;
+console.log(greeting2);
 
 // Functions
 
-function add(num1,num2) {
-    return num1 + num2;
+function add(num1, num2) {
+  return num1 + num2;
 }
 
-const add2 = (num1,num2) =>{
-    return num1+num2;
-}
+const add2 = (num1, num2) => {
+  return num1 + num2;
+};
 
 // Callback Function
 
 function greeting(callback) {
-    callback('Nice');
+  callback('Nice');
 }
 
 function logGreeting(name) {
-    console.log('Hello',name);
+  console.log('Hello', name);
 }
 
 greeting(logGreeting);
+
 // Object
 
 const dog = {
-    name: 'Bill',
-    age: 10,
-    color: 'black',
-    parents: ['John','Jane'],
-    bark() {
-        console.log('Wulf!');
-    },
-    introduce() {
-        console.log(`I am dog named ${this.name}`);
-    }
-}
+  name: 'Bill',
+  age: 10,
+  color: 'black',
+  parents: ['John', 'Jane'],
+  bark() {
+    console.log('Wulf!!!');
+  },
+  introduce() {
+    console.log(`I am dog named ${this.name}`);
+  }
+};
 
 console.log(dog.name);
-dog.age = 20;
-console.log(dog.age);
 dog.bark();
 dog.introduce();
+
+console.log(dog.age);
+dog.age = 20;
+console.log(dog.age);
 
 dog.breed = 'Shiba Inu';
 console.log(dog.breed);
 
-const me = {
-    name: 'Rawitch',
-    lname: 'Payakkawan',
-    years: 2,
-    age: 20,
-    isStudent: true,
-    welcome(){
-        console.log('Hello');
-    },
-    introduce() {
-        console.log(`My name is ${this.name} ${this.lname}`);
-    },
-    greeting(name){ 
-        console.log(`Hello, ${name}`);
-    }
-}
+// สร้าง object แสดงถึงตัวเราเอง มี properties ชื่อ, นามสกุล, ชั้นปี, อายุ, และ สถานะความเป็นนักเรียน
+// และ methods กล่าวแนะนำตัว และ กล่าวทักทายชื่อคน
 
-me.welcome();
-me.introduce();
-me.greeting();
+const person = {
+  firstName: 'Tatpol',
+  lastName: 'Samakpong',
+  year: 3,
+  age: 20,
+  isStudent: true,
+  introduce() {
+    console.log(`My name is ${this.firstName} ${this.lastName}`);
+  },
+  greet(name) {
+    console.log(`Hello, ${name}. Nice to meet you`);
+  }
+};
 
 // Destructuring
 
 const d1 = [1, 2, 3, 4, 20];
-const d2 = { str: 'Hi', num: 2, bool: false, arr:[1, 2, 3]};
+const d2 = { str: 'Hi', num: 2, bool: false, arr: [1, 2, 3] };
 
 const [a1, a2, a3, ...rest] = d1;
 console.log(a1);
@@ -166,44 +165,41 @@ console.log(rest2);
 // Basic Array Methods
 
 const users = [
-    {
-        id: 1,
-        name: 'A',
-        age: 44
-    },
-    {
-        id: 2,
-        name: 'B',
-        age: 20
-    },
-    {
-        id: 3,
-        name: 'C',
-        age: 13
-    },
-    {
-        id: 4,
-        name: 'D',
-        age: 18
-    },
-    {
-        id: 5,
-        name: 'E',
-        age: 5
-    }
+  {
+    id: 1,
+    name: 'A',
+    age: 44
+  },
+  {
+    id: 2,
+    name: 'B',
+    age: 20
+  },
+  {
+    id: 3,
+    name: 'C',
+    age: 13
+  },
+  {
+    id: 4,
+    name: 'D',
+    age: 18
+  },
+  {
+    id: 5,
+    name: 'E',
+    age: 5
+  }
 ];
 
-users.forEach(function (u){
-    console.log(u.name);
+users.forEach(function (u) {
+  console.log(u.name);
 });
 
-// const userWithId3 = users.find(function(user){
-//     return users.if=d === 3;
-// });
 const userWithId3 = users.find((user) => user.id === 3);
 console.log(userWithId3);
 
-const indexOfB = users.findIndex((user) =>user.name === 'B' );
+const indexOfB = users.findIndex((user) => user.name === 'B');
 console.log(indexOfB);
 
 const adults = users.filter((user) => user.age >= 18);
@@ -212,19 +208,35 @@ console.log(adults);
 const userNameList = users.map((user) => user.name);
 console.log(userNameList);
 
-//const usersNoId = users.map((user) => ({ name: user.name, age: user.age}));
-const usersNoId = users.map(({ name, age})=>{
-    return { name, age};
+// 1. เปลี่ยนเป็น array ที่เก็บ object ของคน โดยที่แต่ละคนไม่มี id
+// result: [{ name: ..., age: ... }, { name: ..., age: ... }, ...]
+const newUserList = users.map(({ name, age }) => {
+  return { name, age };
 });
-console.log(usersNoId);
+console.log(newUserList);
 
+// 2. หา object คนที่ชื่อ E
+// result: { name: 'E', ... }
 const eUser = users.find((user) => user.name === 'E');
 console.log(eUser);
 
-users.forEach((user)=>{
-    user.greeting = function(){
-        console.log(`Hello, my name is ${this.name}`);
-    };
+// 3. สร้าง method ให้ object คนแต่ละคนให้สามารถแนะนำตัวเองได้
+// result: users[1].greeting() // Hello, my name is B
+users.forEach((user) => {
+  user.greeting = function () {
+    console.log(`Hello, my name is ${this.name}`);
+  };
 });
 
 users[0].greeting();
+
+const newUserList2 = users.map((user) => {
+  return {
+    ...user,
+    greeting: function () {
+      console.log(`Hello my name is ${this.name}`);
+    }
+  };
+});
+
+newUserList2[0].greeting();
